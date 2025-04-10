@@ -1,0 +1,563 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    /*overflow: hidden;*/
+    font-family: Arial, sans-serif;
+    padding-bottom: 40px;
+
+    overflow-x: hidden; 
+    
+}
+
+body {
+    background: linear-gradient(145deg, #234e7d 20%, #0659f4 60%, #002f6c);
+    
+    background-attachment: fixed;
+}
+
+
+.wave-container {
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    z-index: -10;
+}
+
+.wave {
+    position: absolute;
+    width: 200%;
+    height: 200px;
+    background: rgba(255, 255, 255, 0.1);
+    opacity: 0.5;
+    border-radius: 50%;
+    animation: waveAnimation 6s ease-in-out infinite;
+    z-index: -10;
+    transition: transform 0.4s ease-in-out, box-shadow 0.7s ease-in-out;
+    overflow: hidden;
+}
+
+.wave1 {
+    top: 30%;
+    left: -50%;
+    animation-delay: 0s;
+    z-index: -10;
+    transition: transform 0.4s ease-in-out, box-shadow 0.7s ease-in-out;
+
+}
+
+.wave2 {
+    top: 50%;
+    left: -50%;
+    animation-delay: 2s;
+    opacity: 0.3;
+    z-index: -10;
+
+}
+
+.wave3 {
+    top: 100%;
+    left: -50%;
+    animation-delay: 4s;
+    opacity: 0.2;
+    z-index: -10;
+
+}
+
+@keyframes waveAnimation {
+    0% {
+        transform: translateX(0) translateY(0);
+    }
+    50% {
+        transform: translateX(50px) translateY(-20px);
+    }
+    100% {
+        transform: translateX(0) translateY(0);
+    }
+}
+
+
+
+
+
+.top-bar {
+    display: grid;
+    grid-template-columns: auto 1fr auto; 
+    align-items: center;
+    padding: 50px 30px;
+    position: relative;
+    z-index: 3;
+
+    
+}
+
+/* Avatar et nom à gauche */
+.left {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+/* Avatar rond */
+.avatar {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%; /* Rond */
+    margin-left: 50px;
+}
+
+
+/* Groupe d'icônes au centre avec Grid */
+.icons-group {
+    display: grid;
+    grid-template-columns: repeat(6, auto); /* 4 colonnes pour les icônes */
+    gap: 80px; /* Espace entre chaque icône */
+    justify-content: center;
+    z-index: 2;
+}
+
+/* Style des icônes */
+.icon-img {
+    width: 40px;  /* Taille plus grande pour voir l'effet */
+    height: 40px;
+    border-radius: 50%; /* Pour donner un effet rond */
+    z-index: 2;
+    
+}
+
+/* Effet de survol */
+.icon-img:hover {
+    transform: scale(1.2); /* Zoom léger au survol */
+}
+
+
+
+
+/* Horloge à droite */
+.right {
+    text-align: right;
+    font-size: 18px;
+}
+
+
+
+
+
+
+
+.Heure {
+  font-size: 18px;
+}
+
+
+.presentation-section {
+  padding: 40px 60px;
+  color: white;
+}
+
+.presentation-content {
+  display: flex;
+  flex-direction: row-reverse; 
+  justify-content: space-between;
+  align-items: center;
+  gap: 30px;
+}
+
+.presentation-photo {
+  width: 400px;
+  height: 400px;
+  object-fit: cover;
+  border: 10px solid #00aaff;
+  box-shadow: 0 0 15px rgba(0, 170, 255, 0.4);
+  border-radius: 15px;
+}
+
+
+
+.presentation-text p {
+  font-size: 25px;
+}
+
+.presentation-text h2 {
+  font-size: 32px;
+  margin-bottom: 20px;
+}
+
+
+
+
+
+
+.back-end span {
+    display: inline-block;
+    font-size: 2rem;
+    font-weight: bold;
+    transition: transform 0.2s ease;
+    margin-left: 80px;
+}
+
+/* Appliquer un margin-left uniquement aux lettres après la première */
+.back-end span:not(:first-child) {
+    margin-left: 15px;
+    z-index: 1;
+}
+
+
+.back-end span:nth-child(1) { color: #ffffff; } /* B */
+.back-end span:nth-child(2) { color: #ffffff; } /* A */
+.back-end span:nth-child(3) { color: #ffffff; } /* C */
+.back-end span:nth-child(4) { color: #ffffff; } /* K */
+.back-end span:nth-child(5) { color: #ffffff; } /* E */
+.back-end span:nth-child(6) { color: #ffffff; } /* N */
+.back-end span:nth-child(7) { color: #ffffff; } /* D */
+
+
+
+
+
+
+
+
+
+.menu {
+  display: flex;
+  margin-left: 80px;
+  gap: 20px; 
+}
+
+
+.menu-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 60px;
+  z-index: 1;
+  transition: transform 0.7s ease-in-out, box-shadow 0.7s ease-in-out;
+  
+}
+
+
+.menu-item img {
+  width: 150px;
+  height: 150px;
+  margin-right: 10px;
+  border-radius: 15px;
+  transition: transform 0.4s ease-in-out, box-shadow 0.7s ease-in-out;
+  
+}
+
+.menu-item:hover {
+transform: scale(1);
+box-shadow: 0 3px 20px rgba(0, 0, 0, 0.4);
+
+}
+
+
+
+
+.menu-item img:hover {
+  transform: scale(1.1);
+  box-shadow: 15 30px 30px rgba(0, 0, 0, 0.4);
+}
+
+
+
+
+.menu-item p {
+  margin-top: 35px;
+  margin-right: 80px;
+  text-align: center;
+ 
+
+}
+
+
+
+
+.content {
+  text-align: center;
+  margin-top: 20px;
+}
+
+
+.Front-end span {
+    display: inline-block;
+    font-size: 2rem;
+    font-weight: bold;
+    transition: transform 0.2s ease;
+    margin-left: 80px;
+}
+
+/* Appliquer un margin-left uniquement aux lettres après la première */
+.Front-end span:not(:first-child) {
+    margin-left: 15px;
+    margin-top: 50px;
+    z-index: 5;
+}
+
+
+.Front-end span:nth-child(1) { color: #ffffff; } /* B */
+.Front-end span:nth-child(2) { color: #ffffff; } /* A */
+.Front-end span:nth-child(3) { color: #ffffff; } /* C */
+.Front-end span:nth-child(4) { color: #ffffff; } /* K */
+.Front-end span:nth-child(5) { color: #ffffff; } /* E */
+.Front-end span:nth-child(6) { color: #ffffff; } /* N */
+.Front-end span:nth-child(7) { color: #ffffff; } /* D */
+.Front-end span:nth-child(8) { color: #ffffff; } /* D */
+
+
+
+
+.menu-item2 img {
+  width: 150px;
+  height: 150px;
+  margin-right: 10px;
+  border-radius: 15px;
+  transition: transform 0.4s ease-in-out, box-shadow 0.7s ease-in-out;
+
+  
+}
+
+.menu-item2 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 60px;
+  transition: transform 0.4s ease-in-out, box-shadow 0.s ease-in-out;
+  
+  
+}
+
+
+
+.menu-item2:hover {
+transform: scale(1);
+box-shadow: 10 3px 20px rgba(0, 0, 0, 0.4);
+
+}
+
+.menu-item2 img:hover {
+  transform: scale(1.1);
+  box-shadow: 0 30px 30px rgba(0, 0, 0, 0.4);
+}
+
+
+
+.menu2 {
+  display: flex;
+  margin-left: 80px;
+  gap: 20px; 
+}
+
+
+
+
+
+/*------------------------------*/
+
+
+.profil-section {
+  position: relative;
+  z-index: 2; /* s'affiche devant les vagues animées */
+  background-color: rgba(0, 0, 0, 0.3); /* transparence pour fond animé */
+  padding: 30px 50px;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.profil-content {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  max-width: 1000px;
+}
+
+.profil-avatar {
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid #0077cc;
+  box-shadow: 0 0 10px rgba(0, 119, 204, 0.6);
+}
+
+.profil-text h1 {
+  margin: 0;
+  font-size: 26px;
+}
+
+.profil-text p {
+  margin: 5px 0 0;
+  font-size: 16px;
+  color: #ccc;
+}
+
+
+
+
+.earth-container {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 9999; 
+  pointer-events: none;
+  animation: earthMove 100s infinite ease-in-out;
+}
+
+
+.earth {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background: radial-gradient(circle at 30% 30%, #00aaff, #002244);
+  box-shadow:
+    inset -5px -5px 15px rgba(0, 0, 0, 0.5),
+    0 0 25px rgba(0, 170, 255, 0.5),
+    0 0 40px rgba(0, 170, 255, 0.3);
+  animation: spinEarth 6s linear infinite;
+}
+
+/* Rotation de la Terre */
+@keyframes spinEarth {
+  0%   { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* Mouvement aléatoire dans l'espace */
+@keyframes earthMove {
+  0%   { top: 5%;   left: 10%; }
+  20%  { top: 30%;  left: 80%; }
+  40%  { top: 70%;  left: 50%; }
+  60%  { top: 50%;  left: 20%; }
+  80%  { top: 20%;  left: 60%; }
+  100% { top: 5%;   left: 10%; }
+}
+
+
+
+
+/* ========================
+   📱 RESPONSIVE MOBILE
+   ======================== */
+@media (max-width: 600px) {
+  body, html {
+    font-size: 14px;
+  }
+
+  .top-bar {
+    grid-template-columns: 1fr;
+    text-align: center;
+    padding: 20px;
+  }
+
+  .icons-group {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+  }
+
+  .avatar {
+    width: 40px;
+    height: 40px;
+    margin-left: 0;
+  }
+
+  .menu,
+  .menu2 {
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-left: 0;
+    gap: 15px;
+  }
+
+  .menu-item img,
+  .menu-item2 img {
+    width: 80px;
+    height: 80px;
+  }
+
+  .presentation-section {
+    padding: 20px;
+  }
+
+  .presentation-content {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .presentation-photo {
+    width: 200px;
+    height: 200px;
+  }
+
+  .presentation-text h2 {
+    font-size: 24px;
+  }
+
+  .presentation-text p {
+    font-size: 16px;
+  }
+
+  .back-end span,
+  .Front-end span {
+    margin-left: 0;
+    font-size: 1.2rem;
+  }
+
+  .profil-section {
+    flex-direction: column;
+    padding: 20px;
+  }
+
+  .profil-avatar {
+    width: 60px;
+    height: 60px;
+  }
+
+  .profil-text h1 {
+    font-size: 20px;
+  }
+
+  .profil-text p {
+    font-size: 14px;
+  }
+
+  .earth {
+    width: 80px;
+    height: 80px;
+  }
+
+ @media (max-width: 600px) {
+  .icon img {
+    width: 30px !important;
+    height: 30px !important;
+  }
+}
+
+@media (max-width: 600px) {
+  .clock {
+    display: none;
+  }
+}
+
+@media (max-width: 600px) {
+  .back-end,
+  .Front-end {
+    margin-left: 0;
+    padding-left: 0;
+    text-align: center;
+  }
+}
+
+
+
+
+
+
+
+
+}
+
+/* 💡 Ajoute ce bloc à la fin de ton CSS */

@@ -1,0 +1,214 @@
+/* ========================
+   🎨 VARIABLES GLOBAL :root
+   ======================== */
+:root {
+  /* Couleurs */
+  --main-blue: #0659f4;
+  --dark-blue: #002f6c;
+  --mid-blue: #234e7d;
+  --white: #ffffff;
+  --glow-blue: #00aaff;
+
+  /* Tailles & espacements */
+  --spacing-small: 10px;
+  --spacing-medium: 20px;
+  --spacing-large: 30px;
+  --avatar-size: 50px;
+  --icon-size: 50px;
+  --app-icon-size: 150px;
+
+  /* Police */
+  --font-main: Arial, sans-serif;
+  --font-large: 2rem;
+  --font-medium: 18px;
+
+  /* Ombres */
+  --glow-shadow: 0 0 15px rgba(0, 170, 255, 0.4);
+
+  /* z-index */
+  --z-wave: -10;
+  --z-normal: 1;
+  --z-top: 2;
+  --z-above: 3;
+}
+
+/* ========================
+   🧱 BASE
+   ======================== */
+body, html {
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  font-family: var(--font-main);
+}
+
+body {
+  background: linear-gradient(145deg, var(--mid-blue) 20%, var(--main-blue) 60%, var(--dark-blue));
+  height: 120vh;
+}
+
+/* ========================
+   🌊 ANIMATION FOND VAGUES
+   ======================== */
+.wave-container {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  z-index: var(--z-wave);
+}
+
+.wave, .wave1, .wave2, .wave3 {
+  position: absolute;
+  width: 200%;
+  height: 200px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 50%;
+  animation: waveAnimation 6s ease-in-out infinite;
+  z-index: var(--z-wave);
+}
+
+.wave1 {
+  top: 30%;
+  left: -50%;
+  animation-delay: 0s;
+}
+
+.wave2 {
+  top: 50%;
+  left: -50%;
+  animation-delay: 2s;
+  opacity: 0.3;
+}
+
+.wave3 {
+  top: 100%;
+  left: -50%;
+  animation-delay: 4s;
+  opacity: 0.2;
+}
+
+@keyframes waveAnimation {
+  0% { transform: translateX(0) translateY(0); }
+  50% { transform: translateX(50px) translateY(-20px); }
+  100% { transform: translateX(0) translateY(0); }
+}
+
+/* ========================
+   🎮 TOP BAR (header)
+   ======================== */
+.top-bar {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  align-items: center;
+  padding: var(--spacing-large) var(--spacing-medium);
+  position: relative;
+  z-index: var(--z-above);
+}
+
+.left {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-small);
+}
+
+.avatar {
+  width: var(--avatar-size);
+  height: var(--avatar-size);
+  border-radius: 50%;
+  margin-left: var(--spacing-large);
+}
+
+.icons-group {
+  display: grid;
+  grid-template-columns: repeat(6, auto);
+  gap: 80px;
+  justify-content: center;
+  z-index: var(--z-top);
+}
+
+.icon-img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  z-index: var(--z-top);
+}
+
+.icon-img:hover {
+  transform: scale(1.2);
+}
+
+.right {
+  text-align: right;
+  font-size: var(--font-medium);
+}
+
+.clock {
+  font-size: var(--font-medium);
+}
+
+/* ========================
+   🧱 BACK-END / FRONT-END TITRES
+   ======================== */
+.back-end span, .Front-end span {
+  display: inline-block;
+  font-size: var(--font-large);
+  font-weight: bold;
+  transition: transform 0.2s ease;
+  margin-left: 80px;
+  color: var(--white);
+}
+
+.back-end span:not(:first-child),
+.Front-end span:not(:first-child) {
+  margin-left: var(--spacing-small);
+  margin-top: 50px;
+  z-index: var(--z-top);
+}
+
+/* ========================
+   🎮 ICONES MENUS
+   ======================== */
+.menu, .menu2 {
+  display: flex;
+  margin-left: 80px;
+  gap: var(--spacing-medium);
+}
+
+.menu-item, .menu-item2 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 60px;
+  z-index: var(--z-normal);
+}
+
+.menu-item img, .menu-item2 img {
+  width: var(--app-icon-size);
+  height: var(--app-icon-size);
+  margin-right: var(--spacing-small);
+  border-radius: 15px;
+  transition: transform 0.4s ease-in-out, box-shadow 0.7s ease-in-out;
+}
+
+.menu-item img:hover, .menu-item2 img:hover {
+  transform: scale(1.1);
+  box-shadow: 0 30px 30px rgba(0, 0, 0, 0.4);
+}
+
+.menu-item p {
+  margin-top: 35px;
+  margin-right: 80px;
+  text-align: center;
+}
+
+.content {
+  text-align: center;
+  margin-top: var(--spacing-medium);
+}
+
+
+
+
+
+
