@@ -1,5 +1,5 @@
 function getRandomOffset() {
-  // Génère un décalage aléatoire entre -20 et 20 pixels
+  // Génère un décalage aléatoire entre ...
   return Math.floor(Math.random() * 40) - 20;
 }
 
