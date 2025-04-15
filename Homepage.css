@@ -107,18 +107,18 @@ body {
 }
 
 
-/* Groupe d'icônes au centre avec Grid */
+
 .icons-group {
     display: grid;
-    grid-template-columns: repeat(6, auto); /* 4 colonnes pour les icônes */
-    gap: 80px; /* Espace entre chaque icône */
+    grid-template-columns: repeat(6, auto); 
+    gap: 80px;
     justify-content: center;
     z-index: 2;
 }
 
-/* Style des icônes */
+
 .icon-img {
-    width: 40px;  /* Taille plus grande pour voir l'effet */
+    width: 40px;  
     height: 40px;
     border-radius: 50%; /* Pour donner un effet rond */
     z-index: 2;
@@ -296,14 +296,14 @@ box-shadow: 0 3px 20px rgba(0, 0, 0, 0.4);
 }
 
 
-.Front-end span:nth-child(1) { color: #ffffff; } /* B */
-.Front-end span:nth-child(2) { color: #ffffff; } /* A */
-.Front-end span:nth-child(3) { color: #ffffff; } /* C */
-.Front-end span:nth-child(4) { color: #ffffff; } /* K */
-.Front-end span:nth-child(5) { color: #ffffff; } /* E */
-.Front-end span:nth-child(6) { color: #ffffff; } /* N */
-.Front-end span:nth-child(7) { color: #ffffff; } /* D */
-.Front-end span:nth-child(8) { color: #ffffff; } /* D */
+.Front-end span:nth-child(1) { color: #ffffff; } 
+.Front-end span:nth-child(2) { color: #ffffff; }
+.Front-end span:nth-child(3) { color: #ffffff; } 
+.Front-end span:nth-child(4) { color: #ffffff; } 
+.Front-end span:nth-child(5) { color: #ffffff; } 
+.Front-end span:nth-child(6) { color: #ffffff; } 
+.Front-end span:nth-child(7) { color: #ffffff; } 
+.Front-end span:nth-child(8) { color: #ffffff; } 
 
 
 
@@ -439,9 +439,8 @@ box-shadow: 10 3px 20px rgba(0, 0, 0, 0.4);
 
 
 
-/* ========================
-   📱 RESPONSIVE MOBILE
-   ======================== */
+   /*RESPONSIVE*/
+
 @media (max-width: 600px) {
   body, html {
     font-size: 14px;
